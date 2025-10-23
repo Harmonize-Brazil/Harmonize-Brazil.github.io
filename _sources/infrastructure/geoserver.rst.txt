@@ -1,0 +1,7 @@
+GeoServer
+=========
+
+- **URL:** https://geolab.inpe.br/bdc/harmonize/geoserver
+- **Administradores:** Marcos Rodrigues
+- **E-mail:** marcos.rodrigues@inpe.br
+- **Observações:** Instância dedicada ao projeto Harmonize.
