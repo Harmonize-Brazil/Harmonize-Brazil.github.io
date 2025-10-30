@@ -1,0 +1,58 @@
+Dominican Republic Data Cube
+============================
+
+One of the key activities during this period was the publication of Sentinel-2 data cubes for the Dominican Republic. Unlike the Sentinel-2 and Landsat-8 data cubes created for Colombia and Peru, external support was required to generate the grid for the Dominican Republic. This was necessary because the extent of Brazil Data Cube grid did not reach the Dominican Republic, making it necessary to create a new grid specifically for Central America and the Caribbean.
+
+The chalenge requiring external support was in defining the grid composition. By using the grid used by Sentinel-2 (MGRS), we would have overlapping images, and there is more than one projection for the grid in the area. We decided to use a UN shapefile, dissolved Central America and the Caribbean, then took a bbox from it, leaving a box: -117.12347, 7.20623, -59.42037, 32.718699. Then the problem arose: in the BDC tool we needed projection parameters to georeference the data, in the BDC we adopted the Albers Equal Area projection. However, in order to have a grid that covers both Central America and the Caribbean, it was recommended that a cartographer help us define these parameters.
+
+The grid that covered both Central America and the Caribbean is shown in Figure below.
+
+.. figure:: ../img/central-america-grid.png
+   :align: center
+   :width: 80%
+   :figclass: align-center
+
+   **Central_America_SM grid in HARMONIZE Explorer.**
+
+Three grids were generated for the region, one for each data size in the Brazil Data Cube standards: Central_America_SM, Central_America_MD and Central_America_LG.
+
+The description of the Central_America_SM grid in the Brazil Data Cube database is
+
+Central_America_SM is composed of 105600m x 105600m cells on the BDC
+Central AMERICA tiling system. The WGS84 projection is used.
+Central_America_SM Grid uses the Equator and meridian 69 west as the origin.
+Offsets of 5,000,000 meters is applied to X coordinate at the origin. 
+
+It was then possible to download the Sentinel-2 images, cut them out of the grid, correct them and publish the data cube. Called S2-16D-DOMINICAN-1, the cube is provided in the Cloud Optimized GeoTIFF (COG) file format, processed with 10 meters of spatial resolution, reprojected and cropped to the Central_America_SMM grid, considering a 16-day temporal composition function using the Least Cloud Cover First (LCF) best pixel approach.
+
+With this, we now have a Sentinel-2 data cube available for the Dominican Republic for the period 2023-01-01 and 2023-12-31. The non-brazilian image data cube catalog available in the Brazil Data Cube and HARMONIZE Explorer is shown in Table below.
+
+.. table::
+   :widths: auto
+   
+   ======================= =========== ====== ======= =======
+   Collection Name         Platform    Itens  Assets  Size
+   ======================= =========== ====== ======= =======
+   LANDSAT-16D-COLOMBIA    Landsat-8   92     1288    74 GB
+   LANDSAT-16D-PERU        Landsat-8   46     644     43 GB
+   S2-16D-COLOMBIA         Sentinel-2  184    3128    488 GB
+   S2-16D-PERU             Sentinel-2  92     1564    241 GB
+   S2-16D-DOMINICAN        Sentinel-2  299    5083    447 GB
+   ======================= =========== ====== ======= =======
+
+
+The Sentinel-2 data cube available for the Dominican Republic for the period 2023-01-01 and 2023-12-31 is shown in Figures below.
+
+.. figure:: ../img/dominican-republic-data-cube.png
+   :align: center
+   :width: 80%
+   :figclass: align-center
+
+   **Dominican Republic data cube in HARMONIZE Explorer.**
+
+.. figure:: ../img/dominican-republic-data-cube-zoom.png
+   :align: center
+   :width: 80%
+   :figclass: align-center
+
+   **Zoom Dominican Republic data cube in HARMONIZE Explorer.**

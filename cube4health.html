@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en-UK" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cube4health - Package and Service &mdash; HARMONIZE Brazil INPE</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://harmonize-brazil.github.io/cube4health.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Data Collections" href="data_collection/index.html" />
+    <link rel="prev" title="HARMONIZE Brazil INPE - Instance V2" href="instance-v2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #000" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            HARMONIZE Brazil INPE
+              <img src="_static/harmonize.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instance-v2.html">HARMONIZE Brazil INPE - Instance V2</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cube4health - Package and Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-package">Python Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cube4health-api">Cube4health API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_collection/index.html">Data Collections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Python and R Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="infrastructure/index.html">Computational Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-gallery.html">Code-Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutoriais.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #000" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">HARMONIZE Brazil INPE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Cube4health - Package and Service</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Harmonize-Brazil/Harmonize-Brazil.github.io/blob//cube4health.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="instance-v2.html" class="btn btn-neutral float-left" title="HARMONIZE Brazil INPE - Instance V2" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_collection/index.html" class="btn btn-neutral float-right" title="Data Collections" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+  </div>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cube4health-package-and-service">
+<h1>Cube4health - Package and Service<a class="headerlink" href="#cube4health-package-and-service" title="Permalink to this heading"></a></h1>
+<p>Currently, we have a set of algorithms and packages specifically developed for processing drone (module 1), health (module 2), and climate (module 3) data to enable the visualization and analysis based on our technical-scientific concept (HARMONIZE Instance). These data are published using Geoserver, BDC-STAC, and Titiler services.</p>
+<p>All this infrastructure is now being compiled into two general-purpose toolkits: the Cube4Health Python Package (running on the client-side)  and the Cube4Health Application Program Interface (API) which we have a Python Client responsible for accessing services using an API (running on the server-side).  The advantage of the package version is that we have all the modules needed to process and publish data integrated, which can be used for health attention systems. The downside is that you need a scalable server to handle the hardware requirements. On the other side, the cube4health API version will have a lightweight and easy-to-install client, with processing being performed on the server side. The disadvantage is that this approach consumes a significant amount of bandwidth to transmit all the data over the network.</p>
+<section id="python-package">
+<h2>Python Package<a class="headerlink" href="#python-package" title="Permalink to this heading"></a></h2>
+<p>Cube4Health is a Python package developed using version 3.10, which provides a set of scripts for processing and publishing data related to health, climate, and drone imagery, with a specific focus on the Brazilian context. The package follows protocols defined within each module, enabling the integration and analysis of data from various sources, provided they comply with these protocols. It offers an efficient solution for handling such data, facilitating the extraction of essential information for monitoring public health, climate change, and other environmental variables that impact population well-being.</p>
+<p>Figure below illustrates the architecture of <em>Cube4Health</em>, which is composed of modules dedicated to different stages of data processing, each with specific responsibilities within the system.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="_images/c4h-package.png"><img alt="_images/c4h-package.png" src="_images/c4h-package.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 3 - </span><span class="caption-text"><strong>Architecture of the cube4health package.</strong></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Distributed as a Python package, <em>Cube4Health</em> acts as a wrapper for its core modules — including EDDPR, EHIPR, ECLIMPR, and EDPU — which are installed as dependencies. Its integrated functional layer internally manages these specialized components, allowing users to configure the package locally to process their own data. This approach supports the development of modular and scalable pipelines while preserving the flexibility required to connect with external systems and custom data sources.</p>
+<p>Hosted on GitHub (Figure below), the project promotes open access, collaborative contributions, and scientific reproducibility.</p>
+<p><strong>This package is under the development phase, with access restricted to the development team. To request access for https://github.com/Harmonize-Brazil/cube4health, please contact us.</strong></p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/c4h-git.png"><img alt="_images/c4h-git.png" src="_images/c4h-git.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 4 - </span><span class="caption-text"><strong>Screenshot from the Github repository of the cube4health package.</strong></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="cube4health-api">
+<h2>Cube4health API<a class="headerlink" href="#cube4health-api" title="Permalink to this heading"></a></h2>
+<p>The service version of this toolkit aims to provide all functionalities of packages for processing data to integrate into the HARMONIZE project scope as a service, running on server-side. This will be possible thrown a client installed for users that can send requests including raw data and receive metadata, JSON files and images for publication as a response (Figure below).</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/c4h-api.png"><img alt="_images/c4h-api.png" src="_images/c4h-api.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Figure 5 - </span><span class="caption-text"><strong>Architecture of the cube4health API.</strong></span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="instance-v2.html" class="btn btn-neutral float-left" title="HARMONIZE Brazil INPE - Instance V2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="data_collection/index.html" class="btn btn-neutral float-right" title="Data Collections" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, HARMONIZE Brazil INPE.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script> 
+
+</body>
+</html>
