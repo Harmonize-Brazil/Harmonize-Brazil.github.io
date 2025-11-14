@@ -1,0 +1,69 @@
+Non-Brazilian image data cubes
+==============================
+
+As part of the HARMONIZE Project's requirements, image data cubes were generated for all participating coutries and made available through the Brazil Data Cube (BDC) and HARMONIZE Explorer portals.The cubes cover the period from January 01 to December 31, 2023. The catalog of non-Brazilian image data cubes available in the BDC and HARMONIZE Explorer is shown in Table below.
+
+.. table::
+   :widths: auto
+
+   ======================  ==========  =====  ======  ======
+   Collection Name         Platform    Items  Assets  Size
+   ======================  ==========  =====  ======  ======
+   LANDSAT-16D-COLOMBIA    Landsat-8   92     1288    74 GB
+   LANDSAT-16D-PERU        Landsat-8   46     644     43 GB
+   S2-16D-COLOMBIA         Sentinel-2  184    3128    488 GB
+   S2-16D-PERU             Sentinel-2  92     1564    241 GB
+   S2-16D-DOMINICAN        Sentinel-2  299    5083    447 GB
+   ======================  ==========  =====  ======  ======
+
+
+.. note::
+
+   See these data cubes on BDC and Harmonize portals.
+
+   - `BDC Explorer portal <https://data.inpe.br/bdc/explorer/explore>`_
+   - `HARMONIZE Explorer <https://harmonize-brazil.github.io/explorer/>`_
+
+
+
+Dominican Republic Data Cube
+----------------------------
+
+Among the image cubes produced, one of the key activities was the publication of Sentinel-2 data cube for the Dominican Republic. Unlike the Sentinel-2 and Landsat-8 data cubes previously created for Colombia and Peru, generating the Dominican Republic cube required defining a new spatial grid, since the extent of the BDC grid did not cover the country. Therefore, a new grid was created specifically for Central America and the Caribbean. The main challenge was defining the grid composition. Using the standard Sentinel-2 grid (MGRS) would have resulted in overlapping tiles, and multiple projections exist in the region. To address this, a United Nations (UN) shapefile was used to delineate the area. In addition, it was necessary to define projections parameters to georeference the data, as described below, to enable its integration into the BDC.
+
+The grid that covered both Central America and the Caribbean is shown in Figure below.
+
+.. figure:: ../img/central-america-grid.png
+   :align: center
+   :width: 80%
+   :figclass: align-center
+
+   **Central_America_SM grid in HARMONIZE Explorer.**
+
+Three grids were generated for Central America and the Caribbean, one for each data size defined by the BDC standards: Central_America_SM, Central_America_MD and Central_America_LG. The parameter description of the Central_America_SM grid in the BDC database is:
+
+.. raw:: html
+   <p style="font-size: 90%; font-style: italic; margin-left: 20px;">   
+   Central_America_SM is composed of 105600m x 105600m cells on the BDC
+   Central AMERICA tiling system. The WGS84 projection is used.
+   Central_America_SM Grid uses the Equator and meridian 69 west as the origin.
+   Offsets of 5,000,000 meters is applied to X coordinate at the origin. 
+   </p>
+
+Using the Central_America_SM grid, the cube called S2-16D-DOMINICAN-1 was generated and published. The cube is provided in the Cloud Optimized GeoTIFF (COG) format, with a 10-meter spatial resolution and was produced using a 16-day temporal composition based on the Least Cloud Cover First (LCF) best-pixel method. 
+
+The Sentinel-2 data cube available for the Dominican Republic for the period 2023-01-01 and 2023-12-31 is shown in Figures below.
+
+.. figure:: ../img/dominican-republic-data-cube.png
+   :align: center
+   :width: 80%
+   :figclass: align-center
+
+   **Dominican Republic data cube in HARMONIZE Explorer.**
+
+.. figure:: ../img/dominican-republic-data-cube-zoom.png
+   :align: center
+   :width: 80%
+   :figclass: align-center
+
+   **Zoom Dominican Republic data cube in HARMONIZE Explorer.**
