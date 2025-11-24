@@ -1,0 +1,12 @@
+Data Collections
+================
+
+.. toctree::
+    :maxdepth: 1
+    :titlesonly:
+
+    ./collection_alpha
+    ./collection1
+    ./collection2
+    ./non-Brazilian_image_data_cube
+    ./Fieldworks
