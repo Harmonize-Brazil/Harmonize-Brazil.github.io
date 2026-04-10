@@ -1,0 +1,29 @@
+Tutorials
+=========
+
+This section presents the training modules developed and delivered by the HARMONIZE Brazil INPE team during the project.
+
+These tutorials demonstrate how to use the tools developed to access and manipulate EODCtHRS data, run queries, and visualize results, highlighting the technologies advanced by the team over the past years.
+
+2025 HARMONIZE Annual Meeting (Rio de Janeiro/Brasil)
+-----------------------------------------------------
+
+`Training session - Nov 2025 <https://github.com/Harmonize-Brazil/code-gallery/tree/main/jupyter/events/2025-Harmonize-Annual-Meeting>`_.
+
+
+2025 HARMONIZE INPE & FIOCRUZ Training
+--------------------------------------
+
+`Training session - INPE & FIOCRUZ - Jun2025 <https://github.com/Harmonize-Brazil/code-gallery/tree/main/jupyter/events/2025-Harmonize-INPE-Fiocruz-Training>`_.
+
+
+2024 HARMONIZE Annual Meeting (Barcelona/Spain)
+-----------------------------------------------
+
+`2024-HARMONIZE-Annual-Meeting <https://github.com/Harmonize-Brazil/code-gallery/tree/main/jupyter/events/2024-Harmonize-Annual-Meeting>`_.
+
+
+FOSS4G 2024
+-----------
+
+`FOSS4G 2024 <https://brazil-data-cube.github.io/foss4g-2024.html>`_
